@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import "../node_modules/font-awesome/css/font-awesome.min.css"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter} from "react-router-dom";
+import { Provider } from 'react-redux'
+import promiseMW from 'redux-promise'
+import { createStore ,applyMiddleware} from "redux";
+import  rootReducer from "./Redux/Reducer/index";
+const mystor=applyMiddleware(promiseMW)(createStore)
 ReactDOM.render(
+  <Provider store={mystor(rootReducer)}>
+<BrowserRouter>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  
+  </BrowserRouter>
+
+  </Provider>
+ ,
   document.getElementById('root')
 );
 

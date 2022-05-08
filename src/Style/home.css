@@ -1,0 +1,13 @@
+.parant{
+  
+    height: calc(100vh - 56px) !important;
+    width: 100%;
+   
+}
+.parant img{
+    width: 1005%;
+    height: 100%;
+}
+.carousel-caption{
+    bottom: 7.25rem !important;
+}

@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import NavbarComponent from './Components/Navbar';
+import FormComponent from './Components/Form';
+import ContextProvider from './Context/ContextProvider'
+import Footer from './Components/Footer';
+import Home from './Components/Home';
+import Error from './Components/Error';
+import { Routes, Route} from "react-router-dom";
+import Products from './Components/Products';
+import About from './Components/About';
+import Detailes from './Components/Detailes';
+import Sales from './Components/Sales';
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+  {/* <NavbarComponent></NavbarComponent> */}
+
+<ContextProvider>
+<Routes>
+   <Route path="/" element={<FormComponent/>}/>
+      <Route path="/home" element={<Home/>}/>
+      <Route path="/products" element={<Products/>}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="/detailes" element={<Detailes/>}/>
+      <Route path="/sales" element={<Sales/>}/>
+      <Route path="*" element={<Error/>}/>
+
+      </Routes>
+    
+    {/* <Footer></Footer> */}
+  {/* {validSubmit()&&<p>aya</p>} */}
+  </ContextProvider>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container} from 'react-bootstrap'
+import {Container,Row,Col} from 'react-bootstrap'
 import NavbarComponent from './Navbar';
 import '../Style/about.css'
 import { useContext } from 'react';
@@ -13,11 +13,11 @@ function About() {
        <div style={value.theme}>
     <Container>
       <h1 className='headColor text-center p-5'>ABOUT US</h1>
-    <div class="row">
-    <div class="col md-12">
-    <div className=''>  <img src={require('../Images/feature-image.jpg')} alt="" /></div>
-    </div>
-    <div class="col md-12">
+    <Row>
+    <Col sm={12} md={6}>
+    <div className='aboutImage'>  <img src={require('../Images/feature-image.jpg')} alt="" /></div>
+    </Col>
+    <Col sm={12} md={6}>
   <h4 className='subtitle'>Who we are & What we do?</h4>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis.</p>
@@ -26,8 +26,8 @@ function About() {
   <i class="fa fa-twitter" aria-hidden="true"></i>
   <i class="fa fa-behance" aria-hidden="true"></i>
   </div>
-    </div>
-  </div>
+    </Col>
+  </Row>
 
 
     </Container>

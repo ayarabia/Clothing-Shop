@@ -10,10 +10,10 @@ function Detailes() {
   <Container>
       <h1 className='subtitle text-center p-5'>Product Detailes</h1>
     <Row>
-    <Col lg={true}>
-    <div >  <img src={data.image} alt="" style={{width:"50%",height:'400px',margin:'auto',display:'block'}}/></div>
+    <Col sm={12} md={6}>
+    <div >  <img src={data.image} alt="" style={{width:"300px " ,margin:"auto",display:'block'}}/></div>
     </Col>
-    <Col lg={true} >
+    <Col sm={12} md={6}  className='py-5'>
   <h4 className='subtitle mt-5'>{data.title}</h4>
   <p>Category: <span className='subtitle'>{data.category}</span></p>
   <p className='text-danger'>${data.price}</p>

@@ -52,9 +52,9 @@ if(!(userName.match(/^[a-z ]{3,15}$/i))||
   return true}
 }
   return (
-  <div className='myform'>
-   <div className='overlay'></div>
-    <Container className=' mx-auto col-6 p-5'>
+ <div className='myform'>
+
+    <Container >
          <Form onSubmit={validSubmit} className="text-center">
 <Form.Group className="mb-3 text-center" controlId="formBasicEmail">
     <Form.Label className='fs-6 text-danger'>User Name</Form.Label>

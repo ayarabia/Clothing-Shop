@@ -9,8 +9,20 @@
     background-color: #EEEEEE !important;
     padding: 20px !important;
     margin-left: 10px;
+    margin-bottom: 10px;
 }
 .icon i:hover{
     background-color: red !important;
     color: white !important;
+}
+
+.aboutImage img{
+width: 100% ;
+
+}
+@media  (max-width:767px){
+    .aboutImage {
+     margin-bottom: 17px;
+        
+        }
 }
